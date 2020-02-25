@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>P2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="script.js"></script>
+</head>
+<body>
+<header>
+<div id="logo">
+	<a href="index.html"><img src="https://static7lonelyplanetes.cdnstatics.com/sites/default/files/logo.png" alt=""></a>
+</div>
+</header>
+<!-- Responsive Navbar with Dropdown -->
+<div class="topnav" id="myTopnav">
+	<a href="#home" class="active">Inicio</a>
+	<a href="#news">Eventos</a>
+	<a href="#contact">Tienda</a>
+	<div class="dropdown">
+		<button class="dropbtn">Reservar <i class="fa fa-caret-down"></i>
+		</button>
+		<div class="dropdown-content">
+			<a href="#">Viaje</a>
+			<a href="#">Alojamiento</a>
+		</div>
+	</div>
+	<a href="javascript:void(0);" class="icon" onclick="DropdownFunction()">
+	<i class="fa fa-bars"></i>
+	</a>
+	<!-- login -->
+	<button class="open-button" onclick="openForm()">Iniciar sesión</button>
+	<div class="form-popup" id="myForm">
+		<form action="/action_page.php" class="form-container">
+			<h1>Login</h1>
+			<label for="email"><b>Email</b></label>
+			<input type="text" placeholder="Introducir Email" id="email" required>
+			<label for="psw"><b>Contraseña</b></label>
+			<input type="password" placeholder="Introducir contraseña" id="psw" required>
+			<button type="submit" class="btn">Iniciar sesión</button>
+			<button type="button" class="btn cancel" onclick="closeForm()">Cerrar</button>
+		</form>
+	</div>
+	<!-- buscador -->
+	<div class="search-container">
+		<form action="/action_page.php">
+			<input type="text" placeholder="Buscar en Lonely Planet" name="search">
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+	</div>
+</div>
+<!-- Filtros -->
+<div id="filtros">
+	<form>
+		<select name="selector">
+			<option value="relevancia">Por revelancia</option>
+			<option value="baratos">Más baratos</option>
+			<option value="caros">Más caros</option>
+			<option value="nuevos">Más nuevos</option>
+		</select>
+	</form>
+	<form>
+		<input type="checkbox" name="Continente" value="Europa">Europa <input type="checkbox" name="Continente" value="Africa">África <input type="checkbox" name="Continente" value="Asia">Asia <input type="checkbox" name="Continente" value="América">América <input type="checkbox" name="Continente" value="Oceania">Oceanía
+	</form>
+	<form>
+		<div>
+			<input type="search" id="miBusqueda" name="q" placeholder="Filtrar por ...">
+			<button>Buscar</button>
+		</div>
+	</form>
+</div>
+<!--  Eventos  -->
+<section>
+<article>
+<img src="img/img1.jpeg" class="imgsection" alt="">
+<h2>Inglaterra</h2>
+<p>
+	Esta tierra verde, crisol de un imperio y pionera de la democracia parlamentaria, es un lugar excéntrico, extraordinario y fascinante.
+</p>
+</article>
+<article>
+<img src="img/img2.jpeg" class="imgsection" alt="">
+<h2>Alemania</h2>
+<p>
+	En Alemania hay que estar preparado para toda una montaña rusa de sorpresas y tentaciones, un viaje que deparará paisajes conmovedores, estimulante cultura, joyas metropolitanas, románticos palacios y pueblos tradicionales.
+</p>
+</article>
+<article>
+<img src="img/img3.jpeg" class="imgsection" alt="">
+<h2>Bélgica</h2>
+<p>
+	Cargado de historia pero con toda la fascinación de lo nuevo, este pequeño y multilingüe país depara un sinfín de sorpresas grandes y maravillosas. Las ciudades medievales de Bélgica poseen muchos lugares protegidos por la Unesco, pero abundan otros atractivos, como grandes y modernas ciudades, cuevas, kayak, pujantes zonas industriales y playas de arena en el mar del Norte.
+</p>
+</article>
+<article>
+<img src="img/img4.jpeg" class="imgsection" alt="">
+<h2>Irlanda</h2>
+<p>
+	Bienvenidos a Irlanda, un pequeño país con una gran reputación: paisajes imponentes y un pueblo fascinante y amable, cuya naturaleza lírica se expresa en la calidez de su acogida. Todos los rumores son ciertos: Irlanda es una preciosidad. Los irlandeses necesitan poco para proclamar su tierra la más bonita del mundo, y respaldan dicha afirmación con la inquietante soledad de Connemara, la espectacular naturaleza de Donegal o el famoso paisaje de los condados de Kerry y Cork.
+</p>
+</article>
+<article>
+<img src="img/img5.jpeg" class="imgsection" alt="">
+<h2>Luxemburgo</h2>
+<p>
+	El Gran Ducado de Luxemburgo tiene fama por su banca, pero para los ojos es principalmente una sucesión de colinas onduladas salpicadas de pueblos con castillos. ¿Qué nación europea, con solo 84 km de largo, se cuenta entre los tres países más ricos del mundo? Luxemburgo. Y eso es toda una proeza, habida cuenta de que fue totalmente destruido en la II Guerra Mundial, una historia que guardan los museos de todo el país.
+</p>
+</article>
+<article>
+<img src="img/img6.jpeg" class="imgsection" alt="">
+<h2>Croacia</h2>
+<p>
+	La fantasía mediterránea de vivir días cálidos junto a aguas color zafiro a la sombra de antiguas ciudades amuralladas se hace realidad en Croacia. La extraordinaria costa de Croacia, cuajada de islas, es sin duda su principal atractivo. Lo primero que sorprende es la transparencia del agua que, en contraste con las relucientes playas de guijarros blancos, tiene un intenso brillo de tonos esmeralda y zafiro.
+</p>
+</article>
+</section>
+<!-- Pagination -->
+<div class="center">
+	<div class="pagination">
+		<a href="#">&laquo;</a>
+		<a href="#" class="active">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+		<a href="#">6</a>
+		<a href="#">&raquo;</a>
+	</div>
+</div>
+<!-- footer -->
+<footer>
+<a href="index.html"><img src="https://static7lonelyplanetes.cdnstatics.com/sites/default/files/logo.png" alt=""></a>
+<div id="copyright">
+	<p>
+		¿Quienes somos? - Contacto - Política de cookies - Condiciones de uso
+	</p>
+	<p>
+		@2017 Lonely Planet Global Ltd
+	</p>
+	<p>
+		Para la edición en español ©geoPlaneta - Avda. Diagonal 662 Barcelona
+	</p>
+</div>
+<div id="social">
+	<h1>Síguenos</h1>
+	<div class="navbar">
+		<a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+		<a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+		<a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+		<a href="#"><i class="fa fa-pinterest"></i> Pinterest</a>
+	</div>
+</div>
+</footer>
+<!--  BLOQUE COOKIES  -->
+<div id="barraaceptacion" style="display: block;">
+	<div class="inner">
+		 Solicitamos su permiso para aceptar el uso de cookies y obtener datos estadísticos de su navegación en esta web. <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> | <a href="http://politicadecookies.com" target="_blank" class="info">Más información</a>
+	</div>
+</div>
+</body>
+</html>

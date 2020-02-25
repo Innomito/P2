@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+	<title>P2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amiri&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="https://static7lonelyplanetes.cdnstatics.com/sites/default/files/logo.png" alt=""></a>
+        </div>
+    </header>
+    <!-- Responsive Navbar with Dropdown -->
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Inicio</a>
+        <a href="#news">Eventos</a>
+        <a href="#contact">Tienda</a>
+        <div class="dropdown">
+            <button class="dropbtn">Reservar
+            <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content">
+                <a href="#">Viaje</a>
+                <a href="#">Alojamiento</a>
+            </div>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="DropdownFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <!-- login -->
+        <button class="open-button" onclick="openForm()">Iniciar sesión</button>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+                <h1>Login</h1>
+
+                <label for="email"><b>Email</b></label>
+                <input id="email" type="text" placeholder="Introducir Email" name="email" required>
+
+                <label for="psw"><b>Contraseña</b></label>
+                <input id="psw" type="password" placeholder="Introducir contraseña" name="psw" required>
+
+                <button type="submit" class="btn">Iniciar sesión</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Cerrar</button>
+            </form>
+        </div>
+        <!-- buscador -->
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Buscar en Lonely Planet" name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    <!-- Slideshow -->
+    <div class="relleno">
+        <h1>¿Quieres unas vacaciones?</h1>
+        <p>¿A qué estás esperando? Encuentra los mejores chollos de paquetes de vacaciones, grandes viajes y cruceros. Las mejores ofertas de última hora te están esperando, ¡corre que vuelan!</p>
+    </div>
+    <br>
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="img/Slide1.png" style="width:100%" alt="">
+            <div class="text">Paquete de viajes 1</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="img/Slide2.png" style="width:100%" alt="">
+            <div class="text">Paquete de viajes 2</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="img/Slide3.png" style="width:100%" alt="">
+            <div class="text">Paquete de viajes 3</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+
+    <!-- body -->
+    <div class="relleno">
+        <h1>Busca tú destino</h1>
+        <p>
+            Conoce los secretos de cada destino mediante guías y datos de interés turístico, planifica tu viaje o crucero a medida con nuestras ofertas. Somos tu compañero de viaje y estamos a tu lado para que vivas tus vacaciones al máximo
+        </p>
+    </div>
+    <div id="calendario">
+        <div class="month">
+            <ul>
+                <li>
+                    Diciembre<br>
+                    <span style="font-size:18px">2020</span>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="weekdays">
+            <li>LUN</li>
+            <li>MAR</li>
+            <li>MIE</li>
+            <li>JUE</li>
+            <li>VIE</li>
+            <li>SAB</li>
+            <li>DOM</li>
+        </ul>
+
+        <ul class="days">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li><span class="active"><a href="calendar.html">16</a></span></li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+            <li>31</li>
+        </ul>
+    </div>
+    <!-- footer -->
+    <footer>
+        <a href="index.html"><img src="https://static7lonelyplanetes.cdnstatics.com/sites/default/files/logo.png" alt=""></a>
+        <div id="copyright">
+            <p>¿Quienes somos? - Contacto - Política de cookies - Condiciones de uso</p>
+            <p>@2017 Lonely Planet Global Ltd</p>
+            <p>Para la edición en español ©geoPlaneta - Avda. Diagonal 662 Barcelona</p>
+        </div>
+        <div id="social">
+            <h1>Síguenos</h1>
+            <div class="navbar">
+                <a href="#"><i class="fa fa-facebook-square"></i> Facebook</a>
+                <a href="#"><i class="fa fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fa fa-instagram"></i> Instagram</a>
+                <a href="#"><i class="fa fa-pinterest"></i> Pinterest</a>
+            </div>
+        </div>
+    </footer>
+    <!--//BLOQUE COOKIES-->
+    <div id="barraaceptacion" style="display: block;">
+        <div class="inner">
+            Solicitamos su permiso para aceptar el uso de cookies y obtener datos estadísticos de su navegación en esta web.
+            <a href="javascript:void(0);" class="ok" onclick="PonerCookie();"><b>OK</b></a> |
+            <a href="http://politicadecookies.com" target="_blank" class="info">Más información</a>
+        </div>
+    </div>
+</body>
+
+</html>
